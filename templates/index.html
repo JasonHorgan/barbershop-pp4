@@ -1,22 +1,84 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+
 {% block content %}
 <section class="bg-dark text-light p-5 text-center">
     <div class="container">
         <h1> Welcome to Barney's Barbershop </h1>
-        <p class="lead my-4">
-            Barney's Barbershop, established in 1995 and located in the heart of Greystones, County Wicklow, is your
-            go-to destination for timeless cuts, contemporary styles, and a warm, welcoming atmosphere. With a
-            long-standing tradition of quality grooming and personalized service, Barney's combines traditional
-            barbering techniques with modern trends to offer a range of services, from classic haircuts to beard
-            trims and styling. With nearly three decades of experience, our team of skilled barbers is dedicated to
-            ensuring every customer leaves looking sharp and feeling their best.
+        <div class="container bg-custom mt-4">
+            <img class="w-90 mx-auto img-fluid" id="hero" src="/static/images/barber-chair.jpeg" alt="index_hero">
+            <p class="lead my-4">
+                Barney's Barbershop, established in 1995 and located in the heart of Greystones, County Wicklow, is your
+                go-to destination for timeless cuts, contemporary styles, and a warm, welcoming atmosphere. With a
+                long-standing tradition of quality grooming and personalized service, Barney's combines traditional
+                barbering techniques with modern trends to offer a range of services, from classic haircuts to beard
+                trims and styling. With nearly three decades of experience, our team of skilled barbers is dedicated to
+                ensuring every customer leaves looking sharp and feeling their best.
+            </p>
+
+            <button class="btn btn-primary btn-lg">
+                Book Now!
+            </button>
+        </div>
+
+</section>
+
+<section id="instructors" class="p-5 bg-primary">
+    <div class="container">
+        <h2 class="text-center text-white">
+            Our Barbers
+        </h2>
+        <p class="lead text-center text-white mb-5">
+            Our Barbers all have at least 5 years experience
         </p>
-
-        <button class="btn btn-primary btn-lg">
-            Book Now!
-        </button>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img class="w-90 mx-auto img-fluid" src="/static/images/1.jpeg" class="rounded-circle mb-3"
+                            alt="Headshot of a man">
+                        <h3 class="card-title mb-3">John Doe</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                            doloremque! Ut esse iusto est nemo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img class="w-90 mx-auto img-fluid" src="/static/images/3.jpeg" class="rounded-circle mb-3"
+                            alt="Headshot of a woman">
+                        <h3 class="card-title mb-3">Jane Doe</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                            doloremque! Ut esse iusto est nemo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img class="w-90 mx-auto img-fluid" src="/static/images/2.jpeg" class="rounded-circle mb-3"
+                            alt="Headshot of a man">
+                        <h3 class="card-title mb-3">Matt Smith</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                            doloremque! Ut esse iusto est nemo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img class="w-90 mx-auto img-fluid" src="/static/images/4.webp" class="rounded-circle mb-3"
+                            alt="Headshot of a woman">
+                        <h3 class="card-title mb-3">Lauren Smith</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae,
+                            doloremque! Ut esse iusto est nemo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
 </section>
 {%endblock%}
