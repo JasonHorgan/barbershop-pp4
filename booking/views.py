@@ -4,5 +4,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def my_barbershop(request):
-    return HttpResponse("Hello, Barbershop!")
+#def my_barbershop(request):
+ #   return HttpResponse("Hello, Barbershop!")
+
+def index(request):
+    """
+    Renders Home Page.
+    """
+    return render(request, "index.html",)
