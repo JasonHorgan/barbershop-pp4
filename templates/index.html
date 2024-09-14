@@ -2,6 +2,7 @@
 
 {% load static %}
 
+{% url 'account_signup' as signup_url %}
 
 {% block content %}
 <section class="bg-dark text-light p-5 text-center">
@@ -18,9 +19,9 @@
                 ensuring every customer leaves looking sharp and feeling their best.
             </p>
 
-            <button class="btn btn-primary btn-lg">
+            <a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}">
                 Book Now!
-            </button>
+            </a>
         </div>
 
 </section>
