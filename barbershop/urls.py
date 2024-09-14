@@ -1,6 +1,4 @@
-from booking.views import index 
-from booking.views import services 
-from booking.views import about
+
 
 """
 URL configuration for barbershop project.
@@ -18,11 +16,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from booking.views import index 
+from booking.views import services 
+from booking.views import about
 from django.contrib import admin
 from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('about/', about, name= 'about'),
+    path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('', index, name = 'home'),
     path('services/', services, name= 'services'),
