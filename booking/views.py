@@ -18,3 +18,9 @@ def services(request):
     Renders Services Page.
     """
     return render(request, "services.html",)
+
+def about(request):
+    """
+    Renders about page
+    """
+    return render(request, "about.html",)

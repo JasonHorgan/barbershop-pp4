@@ -1,5 +1,6 @@
 from booking.views import index 
 from booking.views import services 
+from booking.views import about
 
 """
 URL configuration for barbershop project.
@@ -21,7 +22,9 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
+    path('about/', about, name= 'about'),
     path('admin/', admin.site.urls),
     path('', index, name = 'home'),
     path('services/', services, name= 'services'),
+    
 ]
