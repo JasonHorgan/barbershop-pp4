@@ -19,6 +19,7 @@ Including another URLconf
 from booking.views import index 
 from booking.views import services 
 from booking.views import about
+from booking.views import appointments
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
@@ -27,6 +28,7 @@ urlpatterns = [
     path('about/', about, name= 'about'),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
+    path('appointments/', appointments, name="appointments"),
     path("", index, name = 'home'),
     path('services/', services, name= 'services'),
     

@@ -24,3 +24,9 @@ def about(request):
     Renders about page
     """
     return render(request, "about.html",)
+
+def appointments(request):
+    """
+    Renders appointments page
+    """
+    return render(request, "appointments.html")
