@@ -4,7 +4,40 @@
 
 {% block content %}
 
-<h1> IS THIS THING ON? </h1>
+<body>
+    
+
+    <!-- Form template from Bootstrap 5 -->
+
+    <div class="container text-center">
+
+    <h1>Book an Appointment</h1>
+
+    <form class="text-white" method="POST">
+        <fieldset >
+          <div class="mb-3">
+            <label for="Select" class="form-label">Select a barber</label>
+            <select id="elect" class="form-select">
+              <option>select</option>
+            </select>
+          <div class="mb-3">
+            <label for="Select" class="form-label">Select a service</label>
+            <select id="elect" class="form-select">
+              <option>select</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="Select" class="form-label">Choose a date and time</label>
+            <select id="elect" class="form-select">
+              <option>select</option>
+            </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+
+    </div>
 
 
 
