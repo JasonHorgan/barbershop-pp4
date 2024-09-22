@@ -8,12 +8,14 @@
     
 
     <!-- Form template from Bootstrap 5 -->
-
-    <div class="container text-center">
+    <section class="p-5 text-center">
+    <div class="container">
 
     <h1>Book an Appointment</h1>
 
     <form class="text-white" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
         <fieldset >
           <div class="mb-3">
             <label for="Select" class="form-label">Select a barber</label>
@@ -38,6 +40,7 @@
       </form>
 
     </div>
+</section>
 
 
 
