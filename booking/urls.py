@@ -7,6 +7,7 @@ urlpatterns = [
     path('/about', views.about, name='about'),
     path('/appointments', views.appointments, name="appointments"),
     path("accounts/", include("allauth.urls")),
+    path('/myappointments', views.myappointments, name="myappointments")
 
 ]
 

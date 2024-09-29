@@ -20,6 +20,7 @@ from booking.views import index
 from booking.views import services 
 from booking.views import about
 from booking.views import appointments
+from booking.views import myappointments
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
@@ -31,5 +32,6 @@ urlpatterns = [
     path('appointments/', appointments, name="appointments"),
     path("", index, name = 'home'),
     path('services/', services, name= 'services'),
+    path('myappointments/', myappointments, name="myappointments")
     
 ]
