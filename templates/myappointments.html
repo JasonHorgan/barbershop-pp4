@@ -1,9 +1,21 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-
+<center>
 <h1>CONGRATS ON BOOKING YOUR APPOINTMENT</h1>
+<br><br>
 
+<form action="" method="POST">
+
+    {{ form | crispy }}
+
+    {% csrf_token %}
+
+    <input type="submit" value="Submit" class="btn btn-success">
+
+</form>
+</center>
 {%endblock%}
