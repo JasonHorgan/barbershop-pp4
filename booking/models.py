@@ -24,9 +24,9 @@ class Appointment(models.Model):
     service = models.ForeignKey(Services, on_delete=models.CASCADE)
     barber = models.ForeignKey(Barber, on_delete=models.CASCADE)
     date = models.DateField()
-    time = models.TimeField(null=True)
+    time = models.TimeField()
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="blog_posts"
+        User, on_delete=models.CASCADE, related_name="appointment"
 )
     created_on = models.DateTimeField(auto_now_add=True)
 
