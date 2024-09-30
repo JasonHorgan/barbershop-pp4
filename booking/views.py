@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import AppointmentForm
@@ -41,9 +41,18 @@ def profile(request):
 
 def book_appointment(request):
     """
-    Renders book_myappointments page
+    Renders book_appointment page and form
     """
-    form = AppointmentForm()
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            appointment = form.save(commit=False)  # Create a new instance without saving it yet
+            appointment.author = request.user  # Set the author to the current user
+            appointment.save()  # Save the appointment to the database
+            return redirect('profile')
+    else:
+        form = AppointmentForm()
+
     return render(request, "book_appointment.html", {"form": form})
 
 

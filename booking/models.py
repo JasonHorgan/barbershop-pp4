@@ -31,4 +31,4 @@ class Appointment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Booking by {self.user} for {self.services} on {self.date} at {self.time}"
+        return f"Booking by {self.author} for {self.service} on {self.date} at {self.time}"
