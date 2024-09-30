@@ -33,9 +33,15 @@ def appointments(request):
     """
     return render(request, "appointments.html")
 
+def profile(request):
+    """
+    Renders appointments page
+    """
+    return render(request, "profile.html")
+
 def book_appointment(request):
     """
-    Renders myappointments page
+    Renders book_myappointments page
     """
     form = AppointmentForm()
     return render(request, "book_appointment.html", {"form": form})

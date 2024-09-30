@@ -21,6 +21,7 @@ from booking.views import services
 from booking.views import about
 from booking.views import appointments
 from booking.views import book_appointment
+from booking.views import profile
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
@@ -32,6 +33,7 @@ urlpatterns = [
     path('appointments/', appointments, name="appointments"),
     path("", index, name = 'home'),
     path('services/', services, name= 'services'),
-    path('book_appointment/', book_appointment, name="book_appointment")
+    path('book_appointment/', book_appointment, name="book_appointment"),
+    path('profile/', profile, name="profile")
     
 ]
