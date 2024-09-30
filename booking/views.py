@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
+from .models import Appointment
 from .forms import AppointmentForm
 
 
@@ -37,7 +38,9 @@ def profile(request):
     """
     Renders appointments page
     """
-    return render(request, "profile.html")
+    bookings = Appointment.objects.filter(author=request.user)
+    return render(request, "profile.html", 
+    {'bookings': bookings})
 
 def book_appointment(request):
     """
