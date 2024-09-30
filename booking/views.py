@@ -33,12 +33,12 @@ def appointments(request):
     """
     return render(request, "appointments.html")
 
-def myappointments(request):
+def book_appointment(request):
     """
     Renders myappointments page
     """
     form = AppointmentForm()
-    return render(request, "myappointments.html", {"form": form})
+    return render(request, "book_appointment.html", {"form": form})
 
 
         
