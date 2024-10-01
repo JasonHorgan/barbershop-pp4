@@ -5,10 +5,42 @@
 {% block content %}
 <div class="container text-center text-white">
 <h1> Welcome to your profile, your appointments are listed below</h1>
-
+<div class="container">
 {% for booking in bookings %}
     {{ booking }}<br>
 {% endfor %}
+</div>
+</div>
+
+<div class="col-12 mt-3 left p-5">
+    <div class="row g-4">
+        {% for booking in bookings %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    
+                        <h2 class="card-title">{{ booking}}</h2>
+                    
+
+                    <hr />
+                    <p class="card-text text-muted h6">{{ booking.created_on}}
+                    </p>
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary" href="#" role="button">Edit Booking</a>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
+</div>
+
 
 </div>
 
