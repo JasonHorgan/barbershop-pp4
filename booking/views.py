@@ -42,6 +42,12 @@ def profile(request):
     return render(request, "profile.html", 
     {'bookings': bookings})
 
+def edit_appointment(request):
+    """
+    Renders edit appointment page
+    """
+    return render(request, "edit_appointment.html")
+
 def book_appointment(request):
     """
     Renders book_appointment page and form

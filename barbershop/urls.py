@@ -21,6 +21,7 @@ from booking.views import services
 from booking.views import about
 from booking.views import appointments
 from booking.views import book_appointment
+from booking.views import edit_appointment
 from booking.views import profile
 from django.contrib import admin
 from django.urls import path
@@ -34,6 +35,7 @@ urlpatterns = [
     path("", index, name = 'home'),
     path('services/', services, name= 'services'),
     path('book_appointment/', book_appointment, name="book_appointment"),
-    path('profile/', profile, name="profile")
+    path('profile/', profile, name="profile"),
+    path('edit_appointment/', edit_appointment, name="edit_appointment")
     
 ]
