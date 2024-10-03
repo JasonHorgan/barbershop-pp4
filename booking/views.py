@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from .models import Appointment
 from .forms import AppointmentForm
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -42,11 +43,22 @@ def profile(request):
     return render(request, "profile.html", 
     {'bookings': bookings})
 
-def edit_appointment(request):
+@login_required
+def edit_appointment(request, appointment_id):
     """
-    Renders edit appointment page
+    Allows users to edit an existing appointment.
     """
-    return render(request, "edit_appointment.html")
+    appointment = get_object_or_404(Appointment, id=appointment_id, author=request.user)
+
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST, instance=appointment)
+        if form.is_valid():
+            form.save()
+            return redirect('profile') 
+    else:
+        form = AppointmentForm(instance=appointment)
+
+    return render(request, "edit_appointment.html", {"form": form, "appointment": appointment})
 
 def book_appointment(request):
     """

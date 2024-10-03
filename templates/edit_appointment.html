@@ -5,6 +5,16 @@
 
 {% block content %}
 <div class="container text-white">
-<h1> EDIT YOUR APPOINTMENT </h1>
+    <center>
+        <h1>Update Your Appointment</h1>
+        <br><br>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form | crispy }}
+
+            <input type="submit" value="Update Appointment" class="btn btn-success">
+        </form>
+    </center>
 </div>
-{%endblock%}
+{% endblock %}

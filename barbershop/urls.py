@@ -36,6 +36,6 @@ urlpatterns = [
     path('services/', services, name= 'services'),
     path('book_appointment/', book_appointment, name="book_appointment"),
     path('profile/', profile, name="profile"),
-    path('edit_appointment/', edit_appointment, name="edit_appointment")
+    path('edit_appointment/<int:appointment_id>/', edit_appointment, name="edit_appointment")
     
 ]
