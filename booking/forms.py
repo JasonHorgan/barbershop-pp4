@@ -15,3 +15,5 @@ class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
         fields = ('service', 'barber', 'date', 'time')
+
+        

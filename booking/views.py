@@ -54,7 +54,8 @@ def edit_appointment(request, appointment_id):
         form = AppointmentForm(request.POST, instance=appointment)
         if form.is_valid():
             form.save()
-            return redirect('profile') 
+        messages.success(request, ('Your booking has been updated successfully'))
+        return redirect('profile') 
     else:
         form = AppointmentForm(instance=appointment)
 
