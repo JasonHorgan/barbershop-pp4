@@ -79,3 +79,8 @@ def book_appointment(request):
 
 
         
+def delete_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id, author=request.user)
+    appointment.delete()
+    messages.success(request, ('Your booking has been cancelled'))
+    return redirect('profile')
