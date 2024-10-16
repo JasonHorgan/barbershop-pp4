@@ -19,9 +19,11 @@
                 ensuring every customer leaves looking sharp and feeling their best.
             </p>
 
-            <a class="btn btn-primary btn-lg" href="{% url 'book_appointment' %}">
-                Book Now!
-            </a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'book_appointment' %}" class="btn btn-primary" >Book Now!</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="btn btn-primary" >Book Now!</a>
+            {% endif %}
         </div>
 
 </section>
