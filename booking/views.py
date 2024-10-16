@@ -79,8 +79,14 @@ def book_appointment(request):
 
 
         
+@login_required
 def delete_appointment(request, appointment_id):
     appointment = get_object_or_404(Appointment, id=appointment_id, author=request.user)
-    appointment.delete()
-    messages.success(request, ('Your booking has been cancelled'))
-    return redirect('profile')
+
+    if request.method == 'POST':  # Handle the actual deletion only when the request is POST
+        appointment.delete()
+        messages.success(request, 'Your booking has been cancelled')
+        return redirect('profile')
+    
+    # Render a confirmation page if the request is not a POST request
+    return render(request, "confirm_cancellation.html", {"appointment": appointment})
