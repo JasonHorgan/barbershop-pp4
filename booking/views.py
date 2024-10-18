@@ -61,6 +61,7 @@ def edit_appointment(request, appointment_id):
 
     return render(request, "edit_appointment.html", {"form": form, "appointment": appointment})
 
+@login_required
 def book_appointment(request):
     """
     Renders book_appointment page and form
