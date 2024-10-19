@@ -1,5 +1,6 @@
 body{
-    background-color: #641E16;
+    background-color: #e1b382;
+    font-family: merriweather;
 }
 
 .navbar-toggle-icon{
@@ -11,11 +12,29 @@ body{
 }
 
 #instructors{
-    background-color: rgb(234, 204, 167);
+    background-color: #2d545e;
+    color: black;
 
 }
 
 h1{
+    color: #12343b;
+}
+
+p.lead.my-4{
+    color:#12343b;
+}
+
+p.lead{
+    color:#12343b;
+}
+
+#story-section h1{
     color: white;
 }
+
+#story-section p {
+    color: white;
+}
+
 
