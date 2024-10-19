@@ -60,6 +60,10 @@ I made a quick Wireframe before my first meeting with my mentor to discuss proje
 ![Wireframe 1](documentation/wireframe1.png)
 ![Wireframe 2](documentation/wireframe2.png)
 
+### Design
+
+I wanted the site to give a cool and calm feel with the colour scheme with minimal images. I went with a blue colour on the home page to give the cool feel, along with muted mustard and dark colours that are easy on the eye. I wanted a calm colour scheme so the user was not distracted and the focus was on the services provided and the user knew exactly where to go to book an appointment. 
+
 In the end I created 8 custom HTML pages, including the Base.html page, which can be seen below:
 
 The index page is the home page where the user can find information about the barbershop and includes a book now button. If the user is not logged in and clicks the book now button, they are directed to the sign in page. If they do not have an account, they can also sign up for an account from here. 
