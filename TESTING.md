@@ -152,7 +152,37 @@ Register -> signup.html - visible to anyone
 
 Login -> login.html - Visible to anyone
 
-Appointments -> profile.html - Only visible to logged in users, otherwise TYPE ERROR??
+Appointments -> profile.html - Only visible to logged in users, otherwise redirect to sign in page
 
-book_appointment.html - only visible to users who are logged in
+book_appointment.html - only visible to users who are logged in, otherwise redirect to sign in page 
 
+edit_appointment - only visible to users who are logged in, otherwise redirect to sign in page. If appointment is not owned by the user who booked it, not found page
+
+## Validation 
+
+All custom HTML pages were put through a HTML validator and passed with no errors. Screnshots below
+
+
+![About validation](documentation/about_validation.png)
+![Confirm validation](documentation/confirmcancellation_validation.png)
+![Edit validation](documentation/editappointment_validation.png)
+![Index validation](documentation/index_validation.png)
+![Profile validation](documentation/profile_validation.png)
+![Services validation](documentation/services_validation.png)
+
+All customer HTML pages were Lighthouse tested and passed these tests too. Screenshots below
+
+![About Lighthouse](documentation/about_lighthouse.png)
+![Confirm Lighthouse](documentation/confirmcancellation_lighthouse.png)
+![Edit Lighthouse](documentation/editappointment_lighthouse.png)
+![Index Lighthouse](documentation/index_lighthouse.png)
+![Profile Lighthouse](documentation/profile_lighthouse.png)
+![Services Lighthouse](documentation/services_lighthouse.png)
+
+CSS was put through a validator and passed with no issues
+
+![CSS Validation](documentation/css_validation.png)
+
+Views.py was put through the CI Python Linter with no issues:
+
+![Views Linter](documentation/views_linter.png)
