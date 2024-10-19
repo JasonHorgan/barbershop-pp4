@@ -71,7 +71,7 @@ On succesful booking of an appointment, the user is then directed to the profile
 ![Log in](documentation/signin.png)
 ![Profile](documentation/profile.png)
 
-The Nav Bar Alo changes depending on logged in state. If the user is logged in, they will see the following Nav Bar:
+The Nav Bar Also changes depending on the logged in state. If the user is logged in, they will see the following Nav Bar:
 
 ![Logged in](documentation/logged_in.png)
 
