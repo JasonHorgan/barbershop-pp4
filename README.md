@@ -83,3 +83,13 @@ If the user clicks on the 'Delete Appointment' button, I have added some defensi
 
 ![Delete app](documentation/delete_app.png)
 
+## Testing
+
+Manual testing was done for this project and all the info can be found [here](https://github.com/JasonHorgan/barbershop-pp4/blob/main/TESTING.md)
+
+## Deployment
+
+This project was deployed using Heroku. Full details of deployment seen below:
+
+
+
