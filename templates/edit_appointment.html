@@ -5,18 +5,18 @@
 
 {% block content %}
 <div class="d-flex flex-column min-vh-100">
-<div class="container text-white">
-    <center>
+<div class="container text-white text-center">
+    
         <h1>Update Your Appointment</h1>
         <br><br>
 
-        <form action="" method="POST">
+        <form method="POST">
             {% csrf_token %}
             {{ form | crispy }}
 
             <input type="submit" value="Update Appointment" class="btn btn-success">
         </form>
-    </center>
+    
 </div>
 </div>
 {% endblock %}
