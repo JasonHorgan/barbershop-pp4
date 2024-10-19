@@ -87,6 +87,10 @@ If the user clicks on the 'Delete Appointment' button, I have added some defensi
 
 Manual testing was done for this project and all the info can be found [here](https://github.com/JasonHorgan/barbershop-pp4/blob/main/TESTING.md)
 
+### Bugs
+
+I encountered a lot of bugs in the development of this project, but as far as I can tell, there are no bugs currently on the live deployed site. Django's built in debug feature was used a lot during development, particulary when writing my views, to help debug any issues that arised.
+
 ## Deployment
 
 This project was deployed using Heroku. Full details of deployment seen below:
@@ -116,3 +120,23 @@ The database used for this project was PostgreSQL from Code Institute and was co
 
 ## Credits
 
+### Content 
+
+I used Chat GPT to write the bios of the barbers and general content of the web pages, as well as the image on the about page. I took the photos of the barbers from royalty free image site Pexels. 
+
+### Code
+
+- The general Django set up was done by following the Code Institute's walkthrough "I think, therefore I blog"
+- I used this video to help guide me through Bootstrap for the base and html page: https://www.youtube.com/watch?v=4sosXZsdy-s
+- I used this video to help guide me through Bootstrap for the services page: https://www.youtube.com/watch?v=PwEvMY7nnY8
+- Bootstrap 5 library was used a lot for this project's general layout. 
+- I watched a lot of videos from the Django Wednesday series on this channel to help me get a better understanding of how   Django works in general, but particulary with the CRUD functionality on my site: https://www.youtube.com/playlist?list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy
+- I used [STACK OVERFLOW](https://stackoverflow.com/) quite a bit when it came to helping me understand debug error messages 
+- [W3SCHOOLS](https://w3schools.com/) was used as a guide to help me understand Django and its features - 
+I used chat gpt to help me with the messages in Django but the code was wrong so I had to re-write it with a combination of help from stack overflow, W3 Schools and the Django Wednesdays blog mentioned above.
+- Code in my profile.html page was written with the guidance of the blog list in "I think, therefore I blog"
+
+### Acknowledgements
+
+- I want to thank my mentor Graham for his constant guidance and support through the course so far and with this project. 
+- I also want to thank my cohort facilitator Marko for constantly checking in to make sure I have all the resources I need and always offering a helping hand if I need it. 
