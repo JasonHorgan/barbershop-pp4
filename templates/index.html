@@ -1,89 +1,113 @@
-{% extends "base.html" %}
-
-{% load static %}
-
-{% url 'account_signup' as signup_url %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% url 'account_signup' as
+signup_url %} {% block content %}
 <section class="p-5 text-center">
-    <div class="container">
-        <h1> Welcome to Barney's Barbershop </h1>
-        <div class="container bg-custom mt-4">
-            <img class="w-90 mx-auto img-fluid" id="hero" src="/static/images/barber-chair.jpeg" alt="index_hero">
-            <p class="lead my-4">
-                Barney's Barbershop, established in 1995 and located in the heart of Greystones, County Wicklow, is your
-                go-to destination for timeless cuts, contemporary styles, and a warm, welcoming atmosphere. With a
-                long-standing tradition of quality grooming and personalized service, Barney's combines traditional
-                barbering techniques with modern trends to offer a range of services, from classic haircuts to beard
-                trims and styling. With nearly three decades of experience, our team of skilled barbers is dedicated to
-                ensuring every customer leaves looking sharp and feeling their best.
-            </p>
+  <div class="container">
+    <h1>Welcome to Barney's Barbershop</h1>
+    <div class="container bg-custom mt-4">
+      <img
+        class="w-90 mx-auto img-fluid"
+        id="hero"
+        src="/static/images/barber-chair.jpeg"
+        alt="index_hero"
+      />
+      <p class="lead my-4">
+        Barney's Barbershop, established in 1995 and located in the heart of
+        Greystones, County Wicklow, is your go-to destination for timeless cuts,
+        contemporary styles, and a warm, welcoming atmosphere. With a
+        long-standing tradition of quality grooming and personalized service,
+        Barney's combines traditional barbering techniques with modern trends to
+        offer a range of services, from classic haircuts to beard trims and
+        styling. With nearly three decades of experience, our team of skilled
+        barbers is dedicated to ensuring every customer leaves looking sharp and
+        feeling their best.
+      </p>
 
-            {% if user.is_authenticated %}
-            <a href="{% url 'book_appointment' %}" class="btn btn-primary" >Book Now!</a>
-            {% else %}
-            <a href="{% url 'account_login' %}" class="btn btn-primary" >Book Now!</a>
-            {% endif %}
-        </div>
-        </div>
+      {% if user.is_authenticated %}
+      <a href="{% url 'book_appointment' %}" class="btn btn-primary"
+        >Book Now!</a
+      >
+      {% else %}
+      <a href="{% url 'account_login' %}" class="btn btn-primary">Book Now!</a>
+      {% endif %}
+    </div>
+  </div>
 </section>
 
 <section id="instructors" class="p-5">
-    <div class="container">
-        <h2 class="text-center text-white">
-            Our Barbers
-        </h2>
-        <p class="lead text-center text-white mb-5">
-            Our barber shop is home to a team of top-tier professionals, each bringing exceptional skill and dedication
-            to their craft. With a blend of extensive experience and fresh talent, they ensure every client receives
-            outstanding service and grooming excellence.
-        </p>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img class="w-90 mx-auto img-fluid" src="/static/images/1.jpeg"
-                            alt="Headshot of a man">
-                        <h3 class="card-title mb-3">John</h3>
-                        <p class="card-text">John is a skilled barber with 5 years of experience, delivers stylish cuts
-                            and exceptional service with every trim.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img class="w-90 mx-auto img-fluid" src="/static/images/3.jpeg" 
-                            alt="Headshot of a woman">
-                        <h3 class="card-title mb-3">Jane</h3>
-                        <p class="card-text">Jane, a barber with 6 years of experience, crafts perfect styles and
-                            provides top-notch grooming with every visit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img class="w-90 mx-auto img-fluid" src="/static/images/2.jpeg" 
-                            alt="Headshot of a man">
-                        <h3 class="card-title mb-3">Paul</h3>
-                        <p class="card-text">Paul, an exceptional barber with 10 years of experience, delivers precision
-                            cuts and outstanding service.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img class="w-90 mx-auto img-fluid" src="/static/images/4.webp"
-                            alt="Headshot of a woman">
-                        <h3 class="card-title mb-3">Sarah</h3>
-                        <p class="card-text">Sarah, a junior barber with 1 year of experience and immense potential,
-                            brings fresh skills and enthusiasm to every cut.</p>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="text-center text-white">Our Barbers</h2>
+    <p class="lead text-center text-white mb-5">
+      Our barber shop is home to a team of top-tier professionals, each bringing
+      exceptional skill and dedication to their craft. With a blend of extensive
+      experience and fresh talent, they ensure every client receives outstanding
+      service and grooming excellence.
+    </p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-light">
+          <div class="card-body text-center">
+            <img
+              class="w-90 mx-auto img-fluid"
+              src="/static/images/1.jpeg"
+              alt="Headshot of a man"
+            />
+            <h3 class="card-title mb-3">John</h3>
+            <p class="card-text">
+              John is a skilled barber with 5 years of experience, delivers
+              stylish cuts and exceptional service with every trim.
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-light">
+          <div class="card-body text-center">
+            <img
+              class="w-90 mx-auto img-fluid"
+              src="/static/images/3.jpeg"
+              alt="Headshot of a woman"
+            />
+            <h3 class="card-title mb-3">Jane</h3>
+            <p class="card-text">
+              Jane, a barber with 6 years of experience, crafts perfect styles
+              and provides top-notch grooming with every visit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-light">
+          <div class="card-body text-center">
+            <img
+              class="w-90 mx-auto img-fluid"
+              src="/static/images/2.jpeg"
+              alt="Headshot of a man"
+            />
+            <h3 class="card-title mb-3">Paul</h3>
+            <p class="card-text">
+              Paul, an exceptional barber with 10 years of experience, delivers
+              precision cuts and outstanding service.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-light">
+          <div class="card-body text-center">
+            <img
+              class="w-90 mx-auto img-fluid"
+              src="/static/images/4.webp"
+              alt="Headshot of a woman"
+            />
+            <h3 class="card-title mb-3">Sarah</h3>
+            <p class="card-text">
+              Sarah, a junior barber with 1 year of experience and immense
+              potential, brings fresh skills and enthusiasm to every cut.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 {%endblock%}

@@ -1,22 +1,21 @@
-{% extends "base.html" %}
-
-{% load static %}
-{% load crispy_forms_tags %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% load crispy_forms_tags %} {%
+block content %}
 <div class="d-flex flex-column min-vh-100">
-<div class="container text-white">
+  <div class="container text-white">
     <center>
-        <h1>Update Your Appointment</h1>
-        <br><br>
+      <h1>Update Your Appointment</h1>
+      <br /><br />
 
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{ form | crispy }}
+      <form action="" method="POST">
+        {% csrf_token %} {{ form | crispy }}
 
-            <input type="submit" value="Update Appointment" class="btn btn-success">
-        </form>
+        <input
+          type="submit"
+          value="Update Appointment"
+          class="btn btn-success"
+        />
+      </form>
     </center>
-</div>
+  </div>
 </div>
 {% endblock %}
