@@ -6,10 +6,10 @@
 
 {% block content %}
 <div class="d-flex flex-column min-vh-100">
-<div class="container p-5 text-white">
+<div class="container p-5 text-black">
 <h1>{% trans "Sign Up" %}</h1>
 
-<p class="text-white">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="text-black">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
