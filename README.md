@@ -89,7 +89,11 @@ Manual testing was done for this project and all the info can be found [here](ht
 
 ### Bugs
 
-I encountered a lot of bugs in the development of this project, but as far as I can tell, there are no bugs currently on the live deployed site. Django's built in debug feature was used a lot during development, particulary when writing my views, to help debug any issues that arised.
+I encountered a lot of bugs in the development of this project, however, there are no bugs currently on the live deployed site. Django's built in debug feature was used a lot during development, particulary when writing my views, to help debug any issues that arised.
+
+One of the bugs I encountered was that whenever someone signed into their account, they would see messages for users other than themselves. For example, if user 1 logged in and went to the profile page, they may see a message stating that user 2 updated their appointment. I fixed this with the help of my the django wednesdays youtube series mentioned in the references section of the readme. 
+
+Another bug I encountered was that if a user was not logged in, they were able to access the profile.html page. I fixed this by adding the @login_required snipped to my profile view, so now the profile page is only available when logged in, otherwise the user is directed to log in. 
 
 ## Deployment
 
