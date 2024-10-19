@@ -91,5 +91,28 @@ Manual testing was done for this project and all the info can be found [here](ht
 
 This project was deployed using Heroku. Full details of deployment seen below:
 
+Part 1 - Create the Heroku app:
 
+Navigate to your Heroku dashboard and create a new app with a unique name in a region close to you.
+In your new app’s settings tab, ensure the Config Var DISABLE_COLLECTSTATIC key has a value of 1.
+Part 2 - Update your code for deployment:
+
+Use pip3 to install gunicorn~=20.1 and freeze it to the requirements.txt file.
+In the settings.py file, set the DEBUG constant to False and append the '.herokuapp.com' hostname to the ALLOWED_HOSTS list.
+Git add, commit and push the code to your GitHub repo.
+
+Part 3 - Deploy to Heroku:
+
+In your new app’s Deploy tab, search for your GitHub repo and connect it to the Heroku app. Manually deploy the main branch of this GitHub repo.
+In your new app’s resources tab, ensure you are using an eco dyno and delete any Postgres database Add-on.
+
+### Django Secret Key
+
+The secret key was generated using a secret key generator online. It was then set as an environment variable and stored in env.py, as advised in the course material. 
+
+### Database 
+
+The database used for this project was PostgreSQL from Code Institute and was connected following the steps outlined in the course material. 
+
+## Credits
 
