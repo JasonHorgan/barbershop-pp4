@@ -54,11 +54,12 @@ All user stories can be viewed in full detail [here](https://github.com/users/Ja
 
 ## UI 
 
-I made a quick Wireframe before my first meeting with my mentor to discuss project inception so I would have a rough idea of how I wanted to look, which can be seen below:
+I made a Wireframe and data structure before my first meeting with my mentor to discuss project inception so I would have a rough idea of how I wanted to look and how I wanted the data to be structured, which can be seen below:
 
 
 ![Wireframe 1](documentation/wireframe1.png)
 ![Wireframe 2](documentation/wireframe2.png)
+![Data Structure](documentation/data_structure.png)
 
 ### Design
 
