@@ -1,13 +1,13 @@
 <!-- confirm_cancellation.html -->
 
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex flex-column min-vh-100">
 <div class="container text-white text-center">
   <div class="confirmation-message">
     <h2>Confirm Cancellation</h2>
-    <p>
-      Are you sure you want to cancel your appointment with {{
-      appointment.barber }} on {{ appointment.date }} at {{ appointment.time }}?
-    </p>
+    <p>Are you sure you want to cancel your appointment with {{ appointment.barber }} on {{ appointment.date }} at {{ appointment.time }}?</p>
 
     <form method="post">
       {% csrf_token %}
@@ -15,5 +15,6 @@
       <a href="{% url 'profile' %}" class="btn btn-secondary">Go Back</a>
     </form>
   </div>
+</div>
 </div>
 {% endblock %}
