@@ -52,11 +52,34 @@ I used the issues feature on Github to create user stories using a custom templa
 All user stories can be viewed in full detail [here](https://github.com/users/JasonHorgan/projects/4)
 
 
-### Issues 
-
-### Labels
-
 ## UI 
 
-Insert UI info here explaining all pages 
+I made a quick Wireframe before my first meeting with my mentor to discuss project inception so I would have a rough idea of how I wanted to look, which can be seen below:
+
+
+![Wireframe 1](documentation/wireframe1.png)
+![Wireframe 2](documentation/wireframe2.png)
+
+In the end I created 8 custom HTML pages, including the Base.html page, which can be seen below:
+
+The index page is the home page where the user can find information about the barbershop and includes a book now button. If the user is not logged in and clicks the book now button, they are directed to the sign in page. If they do not have an account, they can also sign up for an account from here. 
+If the user is logged in when they click te book now button, they are directed to the create appointment page where they can book an appointment. 
+On succesful booking of an appointment, the user is then directed to the profile page, where they can view their appointments. This can be seen in the screenshots below. 
+
+![Index](documentation/index_page.png)
+![Book appointment](documentation/book_app.png)
+![Log in](documentation/signin.png)
+![Profile](documentation/profile.png)
+
+The Nav Bar Alo changes depending on logged in state. If the user is logged in, they will see the following Nav Bar:
+
+![Logged in](documentation/logged_in.png)
+
+If the user is logged out, the navbar will appear like so:
+
+![Logged out](documentation/logged_out.png)
+
+If the user clicks on the 'Delete Appointment' button, I have added some defensive programming for good user experience so they are required to confirm cancellation before the appointment is cancelled:
+
+![Delete app](documentation/delete_app.png)
 
