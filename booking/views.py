@@ -33,7 +33,7 @@ def appointments(request):
     """
     return render(request, "appointments.html")
 
-
+@login_required
 def profile(request):
     """
     Renders appointments page
