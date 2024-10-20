@@ -9,7 +9,7 @@ Ensure a user can sign up to the website
 Steps:
 
 1. Navigate to [Barney's Barbershop Sign in](https://jh-pp4-9671216aa959.herokuapp.com/accounts/login/) and click Sign up
-2. Enter email, username and password (optional)
+2. Enter email, username and password
 3. Enter Password again
 4. Click Sign up
 
